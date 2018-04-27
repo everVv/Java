@@ -1,0 +1,29 @@
+public class one {
+public static void main(String args[]){
+ComputerAverage computer;
+double a = 11.23,b = 22.78;
+computer = new A();
+double result = computer.average(a,b);
+System.out.println("算数平均值："+result);
+computer = new B();
+result = computer.average(a,b);
+System.out.println("几何平均值："+result);
+}
+}
+interface ComputerAverage {
+public double average(double a,double b);
+}
+class A implements ComputerAverage {
+public double average(double a,double b){
+double aver = 0;
+aver = (a+b)/2;
+return aver;
+}
+}
+class B implements ComputerAverage {
+public double average(double a,double b){
+double aver = 0;
+aver = Math.sqrt(a*b);
+return aver;
+}
+}
